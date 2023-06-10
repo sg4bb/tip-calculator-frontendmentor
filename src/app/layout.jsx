@@ -11,7 +11,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={spaceMono.className}>{children}</body>
+      <body
+        className={`bg-grayish-cyan-light text-[24px] ${spaceMono.className}`}
+      >
+        <div className="min-h-screen flex justify-center items-center">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
