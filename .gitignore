@@ -8,6 +8,8 @@
 # testing
 /coverage
 
+/tip-calculator-app-main
+
 # next.js
 /.next/
 /out/
