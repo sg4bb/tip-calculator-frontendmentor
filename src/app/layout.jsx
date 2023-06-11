@@ -1,3 +1,4 @@
+import Logo from "@/components/Logo";
 import "./globals.css";
 import { Space_Mono } from "next/font/google";
 
@@ -14,7 +15,10 @@ export default function RootLayout({ children }) {
       <body
         className={`bg-grayish-cyan-light text-[24px] ${spaceMono.className}`}
       >
-        <div className="min-h-screen flex justify-center items-center">
+        <div className="min-h-screen flex flex-col justify-center items-center">
+          <span className="mb-10 mt-10 md:mt-0">
+            <Logo />
+          </span>
           {children}
         </div>
       </body>

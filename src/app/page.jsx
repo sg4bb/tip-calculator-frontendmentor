@@ -3,10 +3,10 @@ import PersonIcon from "@/components/icons/PersonIcon";
 export default function Home() {
   return (
     <>
-      <div className="bg-white rounded-xl p-7 flex flex-wrap space-x-10">
-        <section className="flex flex-col min-w-[300px] mt-3 space-y-10">
+      <div className="bg-white min-w-[364px] w-full md:w-auto rounded-t-2xl md:rounded-xl p-7 flex justify-center md:justify-start flex-wrap space-y-5 md:space-y-0 space-x-0 md:space-x-10">
+        <section className="flex flex-col min-w-full md:min-w-[300px] mt-0 md:mt-3 space-y-10 px-2">
           <div>
-            <h2 className="text-xs text-grayish-cyan">Bill</h2>
+            <h2 className="text-sm md:text-xs text-grayish-cyan">Bill</h2>
 
             <div className="flex items-center justify-around px-3 mt-2">
               <h2 className="text-dark-grayish-cyan opacity-40 flex-grow">$</h2>
@@ -16,9 +16,11 @@ export default function Home() {
           </div>
 
           <div>
-            <h2 className="text-xs text-grayish-cyan">Select Tip %</h2>
+            <h2 className="text-sm md:text-xs text-grayish-cyan">
+              Select Tip %
+            </h2>
 
-            <div className="mt-4 grid grid-cols-3 grid-rows-2 items-center w-full justify-around gap-3 text-[19px]">
+            <div className="mt-4 grid grid-cols-2 md:grid-cols-3 grid-rows-3 md:grid-rows-2 items-center w-full justify-around gap-3 text-[24px] md:text-[19px]">
               <button className="bg-very-dark-cyan text-white text-center py-2 w-full  rounded-md">
                 5%
               </button>
@@ -39,14 +41,16 @@ export default function Home() {
                 50%
               </button>
 
-              <button className="text-grayish-cyan bg-white text-center py-2 w-full  rounded-md">
+              <button className="text-grayish-cyan bg-white text-end py-2 w-full  rounded-md">
                 Custom
               </button>
             </div>
           </div>
 
           <div>
-            <h2 className="text-xs text-grayish-cyan">Number of People</h2>
+            <h2 className="text-sm md:text-xs text-grayish-cyan">
+              Number of People
+            </h2>
 
             <div className="flex items-center justify-around px-3 mt-2">
               <span className="flex-grow">
@@ -58,17 +62,17 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="text-white bg-very-dark-cyan grid-rows-3 p-8 rounded-xl">
+        <section className="text-white bg-very-dark-cyan px-5 pt-8 pb-5 md:p-8 rounded-xl w-full md:w-auto">
           <div className="flex space-x-20 items-center">
-            <article className="flex flex-col">
+            <article className="flex flex-col flex-grow">
               <h2 className="text-xs">Tip Amount</h2>
               <h2 className="text-[0.7rem] opacity-30">/ person</h2>
             </article>
             <h2 className="text-4xl text-strong-cyan">$4.27</h2>
           </div>
 
-          <div className="flex space-x-20 items-center mt-10">
-            <article className="flex flex-col">
+          <div className="flex space-x-20 items-center mt-3 md:mt-10">
+            <article className="flex flex-col flex-grow">
               <h2 className="text-xs">Total</h2>
               <h2 className="text-[0.7rem] opacity-30">/ person</h2>
             </article>
@@ -76,7 +80,7 @@ export default function Home() {
           </div>
 
           <div className="flex justify-end">
-            <button className="w-full bg-strong-cyan hover:bg-grayish-cyan-light duration-700 text-very-dark-cyan text-center uppercase text-sm py-3 rounded-md mt-32">
+            <button className="w-full bg-strong-cyan hover:bg-grayish-cyan-light hover:duration-700 text-very-dark-cyan text-center uppercase text-sm py-3 rounded-md mt-7 md:mt-32">
               Reset
             </button>
           </div>
