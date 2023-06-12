@@ -1,8 +1,10 @@
 import Logo from "@/components/Logo";
 import "./globals.css";
 import { Space_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 const spaceMono = Space_Mono({ subsets: ["latin"], weight: ["700"] });
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata = {
   title: "FrontendMentor Challengue",
@@ -16,10 +18,56 @@ export default function RootLayout({ children }) {
         className={`bg-grayish-cyan-light text-[24px] ${spaceMono.className}`}
       >
         <div className="min-h-screen flex flex-col justify-center items-center">
-          <span className="mb-10 mt-10 md:mt-0">
+          <span className="flex flex-col items-center mb-5 mt-10 md:mt-0">
             <Logo />
+            <span
+              className={`${montserrat.className} mt-5 md:mt-20 block md:hidden`}
+            >
+              <h2 className="text-xs text-center">
+                Challenge by{" "}
+                <a
+                  className="text-blue-900"
+                  href="https://www.frontendmentor.io/"
+                  target="_blank"
+                >
+                  Frontend Mentor
+                </a>
+                . Coded by{" "}
+                <a
+                  className="text-blue-900"
+                  href="https://github.com/sg4bb"
+                  target="_blank"
+                >
+                  Gabriel Serra
+                </a>
+                .
+              </h2>
+            </span>
           </span>
           {children}
+          <span
+            className={`${montserrat.className} mt-5 md:mt-20 hidden md:block`}
+          >
+            <h2 className="text-sm md:text-xs text-center">
+              Challenge by{" "}
+              <a
+                className="text-blue-900"
+                href="https://www.frontendmentor.io/"
+                target="_blank"
+              >
+                Frontend Mentor
+              </a>
+              . Coded by{" "}
+              <a
+                className="text-blue-900"
+                href="https://github.com/sg4bb"
+                target="_blank"
+              >
+                Gabriel Serra
+              </a>
+              .
+            </h2>
+          </span>
         </div>
       </body>
     </html>

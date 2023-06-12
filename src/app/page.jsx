@@ -103,7 +103,7 @@ export default function Home() {
 
               <input
                 type="number"
-                className="text-very-dark-cyan placeholder:text-dark-grayish-cyan text-end placeholder:text-end py-1 rounded-sm max-w-[92px] ring-0 outline-none focus:outline focus:outline-strong-cyan hover:outline-strong-cyan duration-300"
+                className="text-very-dark-cyan placeholder:text-dark-grayish-cyan text-end placeholder:text-end py-1 rounded-sm max-w-full md:max-w-[92px] ring-0 outline-none focus:outline focus:outline-strong-cyan hover:outline-strong-cyan duration-300 px-5 md:px-0"
                 value={customTip}
                 placeholder="Custom"
                 max={100}
@@ -158,7 +158,13 @@ export default function Home() {
               <h2 className="text-[0.7rem] opacity-30">/ person</h2>
             </article>
             <h2 className="text-4xl text-strong-cyan">
-              ${peoples > 0 ? ((bill * tip) / peoples).toFixed(2) : "0.00"}
+              $
+              {peoples > 0
+                ? (
+                    (bill * (customTip ? customTip / 100 : tip)) /
+                    peoples
+                  ).toFixed(2)
+                : "0.00"}
             </h2>
           </div>
 
